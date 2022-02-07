@@ -24,7 +24,7 @@ const int but_1 = 12;
 const int but_clear = 13;
 
 // lcd
-const int rs = 1, en = 2, d4 = 3, d5 = 4, d6 = 5, d7 = 6;
+const int rs = 0, en = 1, d4 = 4, d5 = 5, d6 = 6, d7 = 7;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 
@@ -43,26 +43,26 @@ void setup() {
 
 void loop() {
   // checks inputs and prints
-  if (digitalRead(8) == HIGH) {
+  if (digitalRead(but_0) == HIGH) {
     input = input * 10;
     printscr();
-    while (digitalRead(8) == HIGH) {
+    while (digitalRead(but_0) == HIGH) {
     delay(1);
     }
   }
   
-  if (digitalRead(9) == HIGH){
+  if (digitalRead(but_1) == HIGH){
     input = input * 10 + 1;
     printscr();
-    while (digitalRead(9) == HIGH) {
+    while (digitalRead(but_1) == HIGH) {
     delay(1);
     }
   }
   
-  if (digitalRead(10) == HIGH){
+  if (digitalRead(but_clear) == HIGH){
     input = 0;
     printscr();
-    while (digitalRead(10) == HIGH) {
+    while (digitalRead(but_clear) == HIGH) {
     delay(1);
     }
   }
