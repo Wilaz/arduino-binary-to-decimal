@@ -19,12 +19,12 @@ void printscr();
 int convert(long long);
 
 // buttons
-const int but_0 = 8;
-const int but_1 = 9;
-const int but_clear = 10;
+const int but_0 = 11;
+const int but_1 = 12;
+const int but_clear = 13;
 
 // lcd
-const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+const int rs = 1, en = 2, d4 = 3, d5 = 4, d6 = 5, d7 = 6;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 
